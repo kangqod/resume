@@ -19,7 +19,7 @@ function About() {
       <S.Contents>
         <S.Top>
           <S.Image src={BgHome} alt="home" />
-          <S.Description>
+          <S.Description style={{ wordBreak: 'keep-all' }}>
             안녕하세요,&nbsp;&nbsp;웹 개발자&nbsp;
             <S.TextHighlight>강병용</S.TextHighlight>&nbsp;입니다.
             <br /> 웹 기술이 빠르게 발전하는 시대에
