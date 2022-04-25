@@ -15,6 +15,7 @@ export default defineConfig({
       }
     })
   ],
+  base: '/resume',
   build: {
     cssCodeSplit: false,
     minify: 'terser',
