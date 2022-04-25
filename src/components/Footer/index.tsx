@@ -1,6 +1,5 @@
 import { useMemo } from 'react'
 import dayjs from 'dayjs'
-import { ReactComponent as IconGithub } from '@/assets/images/svg/github.svg'
 import * as S from './styled'
 
 function Footer() {
