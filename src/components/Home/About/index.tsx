@@ -22,7 +22,7 @@ function About() {
           <S.Description>
             안녕하세요,&nbsp;&nbsp;웹 개발자&nbsp;
             <S.TextHighlight>강병용</S.TextHighlight>&nbsp;입니다.
-            <br /> 웹 기술이 빠르게 발전하는 요즘 시대에
+            <br /> 웹 기술이 빠르게 발전하는 시대에
             <br />
             <S.TextHighlight>좋은 방법</S.TextHighlight>으로 개발하기 위해
             노력하고

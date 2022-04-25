@@ -14,7 +14,9 @@ function Items({ item }: TItemsProps) {
           <S.Ul className="list-circle">
             {item.description.map((desc) => (
               <li>
-                <S.Description>{desc}</S.Description>
+                <S.Description style={{ wordBreak: 'keep-all' }}>
+                  {desc}
+                </S.Description>
               </li>
             ))}
             <li>
