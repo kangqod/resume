@@ -22,8 +22,8 @@ function Experience() {
         const startDate = dayjs(start).format('YYYY-MM-DD')
         const endDate = end ? dayjs(end).format('YYYY-MM-DD') : ''
         return (
-          <>
-            <S.MenuWrapper key={menu.companyName}>
+          <div key={`container_${idx}`}>
+            <S.MenuWrapper key={`wrapper_${idx}`}>
               <S.LeftMenu>
                 <S.Name>{menu.companyName}</S.Name>
               </S.LeftMenu>
@@ -32,13 +32,13 @@ function Experience() {
                   {startDate} ~ {endDate}
                 </S.Period>
                 <S.SubTitle>{menu.position}</S.SubTitle>
-                {menu.children.map((item: TExperienceDesc, idx: number) => {
-                  return <Items key={`items_${idx}`} item={item} />
+                {menu.children.map((item: TExperienceDesc, idx2: number) => {
+                  return <Items key={`items_${idx2}`} item={item} />
                 })}
               </S.RightMenu>
             </S.MenuWrapper>
-            {data.length - 1 !== idx && <S.SubDivider />}
-          </>
+            {data.length - 1 !== idx && <S.SubDivider key={`divider_${idx}`} />}
+          </div>
         )
       })}
     </S.Wrapper>

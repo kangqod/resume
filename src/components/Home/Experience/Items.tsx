@@ -12,16 +12,16 @@ function Items({ item }: TItemsProps) {
         <>
           <p>{item.title}</p>
           <S.Ul className="list-circle">
-            {item.description.map((desc) => (
-              <li>
+            {item.description.map((desc: string, idx: number) => (
+              <li key={`li_${idx}`}>
                 <S.Description style={{ wordBreak: 'keep-all' }}>
                   {desc}
                 </S.Description>
               </li>
             ))}
             <li>
-              {item.tech.map((skill) => (
-                <S.Tag>{skill}</S.Tag>
+              {item.tech.map((skill: string, idx2: number) => (
+                <S.Tag key={`tag_${idx2}`}>{skill}</S.Tag>
               ))}
             </li>
           </S.Ul>

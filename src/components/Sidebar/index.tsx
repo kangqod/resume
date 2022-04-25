@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import { KEY_DRAWER, KEY_DRAWER_BODY, Menus } from '@/config'
 import * as S from './styled'
 
@@ -6,6 +7,13 @@ type TSidebarProps = {
 }
 
 function Sidebar({ children }: TSidebarProps) {
+  const handleClick = useCallback(() => {
+    const $target: HTMLInputElement = document.getElementById(
+      KEY_DRAWER
+    ) as HTMLInputElement
+    $target!.checked = false
+  }, [])
+
   return (
     <S.DrawerContainer>
       <S.Input id={KEY_DRAWER} type="checkbox" />
@@ -16,7 +24,9 @@ function Sidebar({ children }: TSidebarProps) {
           {Menus.map((menu: { key: string; text: string }) => {
             return (
               <li key={menu.key}>
-                <S.Anchor>{menu.text}</S.Anchor>
+                <S.Anchor href={`#${menu.key}`} onClick={handleClick}>
+                  {menu.text}
+                </S.Anchor>
               </li>
             )
           })}
