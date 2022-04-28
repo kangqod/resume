@@ -29,7 +29,7 @@ flex flex-col flex-1 pl-4 md:pl-8 text-zinc-900 dark:text-zinc-50 max-w-full md:
 
 `
 export const RightMenu = tw.div`
-flex flex-col flex-1 pl-4 md:pl-0 mt-2 md:mt-0 gap-y-2
+flex flex-col flex-1 pl-8 md:pl-0 mt-2 md:mt-0 gap-y-2
 `
 
 export const Period = tw.p`

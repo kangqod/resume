@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import Fade from 'react-reveal/Fade'
 import {
   Wrapper,
   Title,
@@ -25,13 +26,15 @@ function Certificate() {
       <Title>{title}</Title>
       {data.map((menu: TCertificateItem) => {
         return (
-          <MenuWrapper key={menu.title}>
+          <MenuWrapper key={`wrapper_${menu.title}`}>
             <LeftMenu>
               <Name>{menu.title}</Name>
             </LeftMenu>
-            <RightMenu>
-              <Period>취득일 : {menu.period}</Period>
-            </RightMenu>
+            <Fade right>
+              <RightMenu>
+                <Period>취득일 : {menu.period}</Period>
+              </RightMenu>
+            </Fade>
           </MenuWrapper>
         )
       })}

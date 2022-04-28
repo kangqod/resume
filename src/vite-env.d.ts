@@ -7,3 +7,5 @@ declare module '*.svg' {
     React.SVGProps<SVGSVGElement> & { title?: string }
   >
 }
+
+declare module 'react-reveal/Fade'

@@ -1,4 +1,5 @@
 import { useCallback, useMemo } from 'react'
+import Fade from 'react-reveal/Fade'
 import { KEY_COMPONENT_SKILLS, Menus } from '@/config'
 import * as S from '@/components/Home/styled'
 import { TMenus, TSkillItem } from '@/models'
@@ -26,14 +27,16 @@ function Skill() {
             <S.RightMenu>
               {menu.result.map((item: string[], idx: number) => {
                 return (
-                  <div className="block" key={idx.toString()}>
-                    {item.map((subItem: string, idx2: number) => (
-                      <S.Tag key={idx2.toString()} className={bgColor(idx)}>
-                        {subItem}
-                      </S.Tag>
-                    ))}
-                    <br />
-                  </div>
+                  <Fade key={`fade_${idx}`} right>
+                    <div className="block">
+                      {item.map((subItem: string, idx2: number) => (
+                        <S.Tag key={idx2.toString()} className={bgColor(idx)}>
+                          {subItem}
+                        </S.Tag>
+                      ))}
+                      <br />
+                    </div>
+                  </Fade>
                 )
               })}
             </S.RightMenu>
