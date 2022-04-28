@@ -37,7 +37,7 @@ function Experience() {
                 </Fade>
                 {menu.children.map((item: TExperienceDesc, idx2: number) => {
                   return (
-                    <Fade key={`fade_${idx}`} right>
+                    <Fade key={`fade_experience_${idx}_${idx2}`} right>
                       <Items key={`items_${idx2}`} item={item} />
                     </Fade>
                   )

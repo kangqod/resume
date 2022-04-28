@@ -27,10 +27,10 @@ function Skill() {
             <S.RightMenu>
               {menu.result.map((item: string[], idx: number) => {
                 return (
-                  <Fade key={`fade_${idx}`} right>
+                  <Fade key={`fade_skills_${idx}`} right>
                     <div className="block">
                       {item.map((subItem: string, idx2: number) => (
-                        <S.Tag key={idx2.toString()} className={bgColor(idx)}>
+                        <S.Tag key={`tag_${idx2}`} className={bgColor(idx)}>
                           {subItem}
                         </S.Tag>
                       ))}
