@@ -17,7 +17,9 @@ function Sidebar({ children }: TSidebarProps) {
   return (
     <S.DrawerContainer>
       <S.Input id={KEY_DRAWER} type="checkbox" />
-      <S.DrawerContent id={KEY_DRAWER_BODY}>{children}</S.DrawerContent>
+      <S.DrawerContent id={KEY_DRAWER_BODY} style={{ overflowY: 'overlay' }}>
+        {children}
+      </S.DrawerContent>
       <S.DrawerSide>
         <S.DrawerOverlay htmlFor={KEY_DRAWER} />
         <S.Ul>

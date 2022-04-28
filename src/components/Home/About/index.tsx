@@ -30,16 +30,16 @@ function About() {
             생각하고
             <br /> 더 좋은 코드를 위해 <S.TextHighlight>소통</S.TextHighlight>
             하는 것을 좋아합니다.
-            <div className="flex items-center gap-x-3 text-zinc-900 dark:text-zinc-50">
+            <S.AddressWrapper>
               <IconMail />
-              <a href="mailto:kangqod@naver.com">kangqod@naver.com</a>
-            </div>
-            <div className="flex items-center gap-x-3 text-zinc-900 dark:text-zinc-50">
+              <S.Anchor href="mailto:kangqod@naver.com">kangqod@naver.com</S.Anchor>
+            </S.AddressWrapper>
+            <S.AddressWrapper>
               <IconGithub />
-              <a href="https://github.com/kangqod" target="_blank">
+              <S.Anchor href="https://github.com/kangqod" target="_blank">
                 https://github.com/kangqod
-              </a>
-            </div>
+              </S.Anchor>
+            </S.AddressWrapper>
           </S.Description>
         </S.Top>
         <S.Bottom>

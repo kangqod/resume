@@ -27,3 +27,9 @@ list-disc text-zinc-900 dark:text-zinc-50
 export const Text = tw.p`
 text-zinc-900 dark:text-zinc-50
 `
+export const AddressWrapper = tw.div`
+flex items-center gap-x-3 text-zinc-900 dark:text-zinc-50
+`
+export const Anchor = tw.a`
+hover:text-yellow-600
+`
