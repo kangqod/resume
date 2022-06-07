@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import dayjs from 'dayjs'
+import Fade from 'react-reveal/Fade'
 import { KEY_COMPONENT_EXPERIENCE, Menus } from '@/config'
 import * as S from '@/components/Home/styled'
 import { TMenus, TExperienceItem, TExperienceDesc } from '@/models'
@@ -28,12 +29,18 @@ function Experience() {
                 <S.Name>{menu.companyName}</S.Name>
               </S.LeftMenu>
               <S.RightMenu>
-                <S.Period>
-                  {startDate} ~ {endDate}
-                </S.Period>
-                <S.SubTitle>{menu.position}</S.SubTitle>
+                <Fade right>
+                  <S.Period>
+                    {startDate} ~ {endDate}
+                  </S.Period>
+                  <S.SubTitle>{menu.position}</S.SubTitle>
+                </Fade>
                 {menu.children.map((item: TExperienceDesc, idx2: number) => {
-                  return <Items key={`items_${idx2}`} item={item} />
+                  return (
+                    <Fade key={`fade_experience_${idx}_${idx2}`} right>
+                      <Items key={`items_${idx2}`} item={item} />
+                    </Fade>
+                  )
                 })}
               </S.RightMenu>
             </S.MenuWrapper>

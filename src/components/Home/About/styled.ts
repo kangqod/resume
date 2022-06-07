@@ -16,7 +16,7 @@ export const TextHighlight = tw.span`
 text-yellow-600
 `
 export const Top = tw.div`
-flex gap-x-5 lg:gap-x-10
+flex gap-x-12 lg:gap-x-20
 `
 export const Bottom = tw.div`
 py-4 px-8 md:p-3
@@ -24,6 +24,15 @@ py-4 px-8 md:p-3
 export const Ul = tw.ul`
 list-disc text-zinc-900 dark:text-zinc-50
 `
+export const Li = tw.li`
+mt-1 md:mt-2
+`
 export const Text = tw.p`
 text-zinc-900 dark:text-zinc-50
+`
+export const AddressWrapper = tw.div`
+flex items-center gap-x-3 text-zinc-900 dark:text-zinc-50
+`
+export const Anchor = tw.a`
+hover:text-yellow-600
 `

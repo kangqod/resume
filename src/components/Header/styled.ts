@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components'
 
 export const Container = tw.header`
-  fixed navbar z-10
+  fixed navbar z-10 w-full
   px-4 py-2
   md:px-8 md:py-4
   bg-zinc-50 dark:bg-zinc-800

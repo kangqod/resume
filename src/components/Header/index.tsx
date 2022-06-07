@@ -7,7 +7,7 @@ import * as S from './styled'
 
 function Header() {
   return (
-    <S.Container style={{ width: 'calc(100% - 16px)' }}>
+    <S.Container>
       <S.Wrapper>
         <div className="flex-1">
           <IconLogo className="w-40 h-12 text-black dark:text-white" />
