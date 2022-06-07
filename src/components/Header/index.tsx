@@ -24,7 +24,7 @@ function Header() {
         <div className="flex flex-none">
           <DarkMode />
           <S.Label htmlFor={KEY_DRAWER}>
-            <IconMenu className="inline-block w-5 h-5 stroke-current text-zinc-900 dark:text-zinc-50" />
+            <IconMenu className="inline-block w-5 h-5 text-zinc-900 dark:text-zinc-50 stroke-current" />
           </S.Label>
         </div>
       </S.Wrapper>

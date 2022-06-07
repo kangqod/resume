@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react'
+import { useMemo } from 'react'
 import Fade from 'react-reveal/Fade'
 import { KEY_COMPONENT_SKILLS, Menus } from '@/config'
 import * as S from '@/components/Home/styled'
@@ -9,10 +9,6 @@ function Skill() {
   const title = useMemo(() => {
     const item = Menus.find((menu: TMenus) => menu.key === KEY_COMPONENT_SKILLS)
     return item && item.text
-  }, [Menus])
-
-  const bgColor = useCallback((index: number) => {
-    return
   }, [])
 
   return (
@@ -30,9 +26,7 @@ function Skill() {
                   <Fade key={`fade_skills_${idx}`} right>
                     <div className="block">
                       {item.map((subItem: string, idx2: number) => (
-                        <S.Tag key={`tag_${idx2}`} className={bgColor(idx)}>
-                          {subItem}
-                        </S.Tag>
+                        <S.Tag key={`tag_${idx2}`}>{subItem}</S.Tag>
                       ))}
                       <br />
                     </div>

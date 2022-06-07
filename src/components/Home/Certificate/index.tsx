@@ -19,7 +19,7 @@ function Certificate() {
       (menu: TMenus) => menu.key === KEY_COMPONENT_CERTIFICATE
     )
     return item && item.text
-  }, [Menus])
+  }, [])
 
   return (
     <Wrapper id={KEY_COMPONENT_CERTIFICATE}>

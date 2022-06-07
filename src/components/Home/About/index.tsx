@@ -11,7 +11,7 @@ function About() {
   const title = useMemo(() => {
     const item = Menus.find((menu: TMenus) => menu.key === KEY_COMPONENT_ABOUT)
     return item && item.text
-  }, [Menus])
+  }, [])
 
   return (
     <Wrapper id={KEY_COMPONENT_ABOUT}>
@@ -32,7 +32,9 @@ function About() {
             하는 것을 좋아합니다.
             <S.AddressWrapper>
               <IconMail />
-              <S.Anchor href="mailto:kangqod@naver.com">kangqod@naver.com</S.Anchor>
+              <S.Anchor href="mailto:kangqod@naver.com">
+                kangqod@naver.com
+              </S.Anchor>
             </S.AddressWrapper>
             <S.AddressWrapper>
               <IconGithub />

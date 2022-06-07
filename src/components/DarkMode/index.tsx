@@ -1,4 +1,4 @@
-import { ReactSVG, useCallback, useContext } from 'react'
+import { useCallback, useContext } from 'react'
 import { ReactComponent as IconSun } from '@/assets/images/svg/sun.svg'
 import { ReactComponent as IconMoon } from '@/assets/images/svg/moon.svg'
 import { KEY_THEME_DARK, KEY_THEME_LIGHT } from '@/config'
@@ -11,15 +11,18 @@ const KEY_SWAP_OFF = 'swap-off'
 function DarkMode() {
   const { theme, setTheme } = useContext(ThemeContext)
 
-  const toggleClassName = useCallback((isSun: boolean) => {
-    if (isSun) {
-      return theme === KEY_THEME_DARK ? KEY_SWAP_OFF : KEY_SWAP_ON
-    } else {
-      return theme === KEY_THEME_DARK ? KEY_SWAP_ON : KEY_SWAP_OFF
-    }
-  }, [])
+  const toggleClassName = useCallback(
+    (isSun: boolean) => {
+      if (isSun) {
+        return theme === KEY_THEME_DARK ? KEY_SWAP_OFF : KEY_SWAP_ON
+      } else {
+        return theme === KEY_THEME_DARK ? KEY_SWAP_ON : KEY_SWAP_OFF
+      }
+    },
+    [theme]
+  )
 
-  function handleClick(_evt: React.MouseEvent<HTMLInputElement>) {
+  function handleClick() {
     const value = theme === KEY_THEME_DARK ? KEY_THEME_LIGHT : KEY_THEME_DARK
     setTheme!(value)
   }

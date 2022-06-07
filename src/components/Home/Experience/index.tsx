@@ -13,7 +13,7 @@ function Experience() {
       (menu: TMenus) => menu.key === KEY_COMPONENT_EXPERIENCE
     )
     return item && item.text
-  }, [Menus])
+  }, [])
 
   return (
     <S.Wrapper id={KEY_COMPONENT_EXPERIENCE}>
