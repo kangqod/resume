@@ -6,7 +6,7 @@ bg-zinc-50 dark:bg-zinc-800
 `
 
 export const Wrapper = tw.article`
-px-4 py-8 md:px-8 md:py-16
+px-4 py-12 md:px-8 md:py-17
 `
 
 export const Title = tw.h1`

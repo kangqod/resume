@@ -16,6 +16,10 @@ export default defineConfig({
     })
   ],
   base: '/resume',
+  server: {
+    open: true,
+    host: '0.0.0.0'
+  },
   build: {
     cssCodeSplit: false,
     minify: 'terser',

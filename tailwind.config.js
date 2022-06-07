@@ -3,6 +3,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      padding: {
+        17: '4.2rem'
+      },
       lineHeight: {
         15: '3.5rem'
       },
