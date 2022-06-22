@@ -117,8 +117,8 @@ function About() {
             </S.Li>
             <S.Li>
               <S.Text style={{ wordBreak: 'keep-all' }}>
-                프로젝트 중 redux, recoil로 상태관리 경험이 있으며 react-query
-                로 데이터 관리가 가능합니다.
+                react-redux, recoil로 상태관리 경험이 있으며 react-query 로
+                데이터 관리가 가능합니다.
               </S.Text>
             </S.Li>
           </S.Ul>

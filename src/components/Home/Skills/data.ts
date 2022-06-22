@@ -5,9 +5,10 @@ const skills: TSkillItem[] = [
     text: 'Front-end',
     result: [
       ['HTML', 'CSS(SCSS, LESS)', 'jQuery', 'JavaScript', 'TypeScript'],
-      ['React', 'Redux', 'Recoil', 'react-query', 'antd', 'TailwindCSS'],
-      ['Vue', 'Nuxtjs', 'Vuex', 'Vuetify'],
+      ['react', 'react-redux', 'recoil', 'react-query', 'antd', 'tailwindcss'],
+      ['vue', 'nuxtjs', 'vuex', 'vuetify'],
       [
+        'vitejs',
         'i18n',
         'babel',
         'webpack',
@@ -15,6 +16,8 @@ const skills: TSkillItem[] = [
         'threejs',
         'chartjs',
         'Openlayers',
+        'pnpm workspace',
+        'changesets',
         'Responsive'
       ]
     ]
@@ -30,11 +33,11 @@ const skills: TSkillItem[] = [
         'git',
         'docker',
         'nexus3',
-        'Socket.io',
+        'socket.io',
         'jira',
         'Confluence',
-        'Zeplin',
-        'Figma'
+        'zeplin',
+        'figma'
       ]
     ]
   }

@@ -15,7 +15,7 @@ export default defineConfig({
       }
     })
   ],
-  base: '/resume',
+  base: '/resume/',
   server: {
     open: true,
     host: '0.0.0.0'
