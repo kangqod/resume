@@ -15,7 +15,7 @@ const skills: TSkillItem[] = [
         'd3',
         'threejs',
         'chartjs',
-        'Openlayers',
+        'openlayers',
         'pnpm workspace',
         'changesets',
         'Responsive'
