@@ -1,4 +1,4 @@
-name: Check code with eslint & pretter
+name: gh-pages publish 
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   formatting:
-    name: Run source scanning
+    name: Check code with eslint & pretter
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -44,7 +44,20 @@ jobs:
         run: |
           pnpm lint
           echo "ESLint Completed!"
+
       - name: Run Prettier
         run: |
           pnpm format
           echo "Prettier Completed!"
+
+      - name: Run Build
+        run: |
+          pnpm build
+          echo "Build Completed!"
+          - name: Deploy
+      
+      - name: Run Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
