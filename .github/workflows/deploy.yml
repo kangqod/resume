@@ -54,7 +54,6 @@ jobs:
         run: |
           pnpm build
           echo "Build Completed!"
-          - name: Deploy
       
       - name: Run Deploy
         uses: peaceiris/actions-gh-pages@v3
