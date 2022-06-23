@@ -1,7 +1,7 @@
 {
   "name": "resume",
-  "private": true,
-  "version": "0.1.0",
+  "private": false,
+  "version": "1.0.0",
   "author": {
     "name": "Chad.K",
     "email": "kangqod@naver.com"
